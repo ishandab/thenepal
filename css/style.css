@@ -2,10 +2,22 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background: #0a0a0a;
-  color: #ddd;
+  color: #fff;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Background Himalayan image */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/himalaya.jpg') center/cover no-repeat;
+  filter: blur(15px);
+  z-index: -1;
 }
 
 /* Navbar */
@@ -13,7 +25,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.6);
   display: flex;
   justify-content: space-between;
   padding: 15px 40px;
@@ -31,7 +43,7 @@ nav ul {
   gap: 25px;
 }
 nav ul li a {
-  color: #ccc;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
@@ -58,9 +70,9 @@ nav ul li a:hover {
   transform: translateY(0);
 }
 
-/* Image styling (full left) */
+/* Image styling (giant left) */
 .slide .image {
-  flex: 1; 
+  flex: 0.65; /* huge left image */
   height: 100vh;
   overflow: hidden;
 }
@@ -68,20 +80,20 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(15px);
-  opacity: 0.4;
+  filter: blur(10px);
+  opacity: 0.5;
   transition: all 1s ease, transform 1s ease;
 }
 .slide.active .image img {
   filter: blur(0);
   opacity: 1;
-  transform: scale(1.08);
-  box-shadow: 0 0 40px #00E5FF;
+  transform: scale(1.1);
+  box-shadow: 0 0 50px #00E5FF;
 }
 
-/* Text styling (full right) */
+/* Text styling (right side) */
 .slide .text {
-  flex: 1;
+  flex: 0.35; /* right side smaller for focus */
   padding: 80px;
   text-align: left;
   transform: translateX(100px);
@@ -97,17 +109,14 @@ h1 {
   font-family: 'Oswald', sans-serif;
   font-size: 5em;
   font-weight: 700;
-  color: #00E5FF;
+  color: #fff;
   letter-spacing: 2px;
-  background: linear-gradient(90deg, #00E5FF, #6A5ACD);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin: 0 0 20px 0;
 }
 
 p {
   font-size: 1.8em;
-  color: #ccc;
+  color: #fff;
   margin-top: 20px;
 }
 
@@ -122,7 +131,7 @@ input, textarea {
   padding: 16px;
   border: none;
   border-radius: 0;
-  background: #1e1e1e;
+  background: rgba(0,0,0,0.6);
   color: white;
   font-size: 1em;
 }
@@ -145,6 +154,6 @@ button:hover {
 footer {
   text-align: center;
   padding: 20px;
-  background: #111;
-  color: #777;
+  background: rgba(0,0,0,0.8);
+  color: #ccc;
 }
