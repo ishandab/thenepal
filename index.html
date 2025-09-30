@@ -3,32 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Nepal | About</title>
+  <title>The Nepal | Presentation</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Navbar -->
   <nav>
     <div class="logo">🇳🇵 The Nepal</div>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="culture.html">Culture</a></li>
-      <li><a href="economy.html">Economy</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#culture">Culture</a></li>
+      <li><a href="#economy">Economy</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <header class="sub-hero" style="background:url('images/about.jpg') center/cover;">
-    <h1>About Nepal</h1>
-  </header>
+  <!-- Slide 1: Home -->
+  <section id="home" class="slide">
+    <h1>Welcome to <span>The Nepal</span></h1>
+    <p>Your window to culture, tradition, and economy.</p>
+  </section>
 
-  <main class="content">
-    <p>Nepal, nestled between India and China, is a land of mountains, rivers, and cultural heritage. Known for Mount Everest, Lord Buddha’s birthplace, and its diverse ethnic traditions, Nepal represents unity in diversity.</p>
-    <p>From bustling Kathmandu streets to the serene Himalayas, Nepal balances ancient traditions with modern growth.</p>
-  </main>
+  <!-- Slide 2: About -->
+  <section id="about" class="slide">
+    <h1>About Nepal</h1>
+    <p>Nepal, home to the Himalayas and Mount Everest, blends heritage with progress.</p>
+  </section>
+
+  <!-- Slide 3: Culture -->
+  <section id="culture" class="slide">
+    <h1>Culture & Traditions</h1>
+    <ul>
+      <li>🎉 Festivals: Dashain, Tihar, Holi</li>
+      <li>🍲 Food: Dal-Bhat, Momo, Sel Roti</li>
+      <li>🏯 Heritage: Pashupatinath, Boudhanath</li>
+    </ul>
+  </section>
+
+  <!-- Slide 4: Economy -->
+  <section id="economy" class="slide">
+    <h1>Economy</h1>
+    <ul>
+      <li>🏔️ Tourism: Treks & Himalayas</li>
+      <li>💵 Remittance: Millions abroad</li>
+      <li>⚡ Hydropower: Energy hub of South Asia</li>
+      <li>💻 IT & Startups: The digital rise</li>
+    </ul>
+  </section>
+
+  <!-- Slide 5: Contact -->
+  <section id="contact" class="slide">
+    <h1>Contact Us</h1>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
 
   <footer>
     <p>© 2025 The Nepal | Made with ❤️ in Nepal</p>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
