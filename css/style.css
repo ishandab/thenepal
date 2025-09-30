@@ -1,22 +1,33 @@
-body {
+/* Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Poppins", sans-serif;
-  background: #f9f9f9;
-  color: #333;
+  background: #0d0d0d;
+  color: #fff;
+  scroll-behavior: smooth;
 }
 
 /* Navbar */
 nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(20,20,20,0.9);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #d32f2f;
   padding: 15px 40px;
-  color: white;
+  z-index: 1000;
 }
 nav .logo {
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1.5em;
+  color: gold;
 }
 nav ul {
   list-style: none;
@@ -24,81 +35,56 @@ nav ul {
   gap: 20px;
 }
 nav ul li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   transition: 0.3s;
 }
 nav ul li a:hover {
-  color: yellow;
+  color: gold;
 }
 
-/* Hero Section */
-.hero {
-  background: url('../images/hero.jpg') center/cover no-repeat;
-  color: white;
+/* Slides */
+.slide {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 100px 20px;
+  padding: 40px;
+  transition: all 0.8s ease;
 }
-.hero h1 {
+.slide:nth-child(even) {
+  background: #111;
+}
+.slide:nth-child(odd) {
+  background: #1a1a1a;
+}
+.slide h1 {
   font-size: 3em;
+  margin-bottom: 20px;
+  color: gold;
 }
-.hero p {
-  font-size: 1.3em;
-  margin: 20px 0;
+.slide p, .slide ul {
+  font-size: 1.2em;
+  max-width: 800px;
+  line-height: 1.7;
 }
+
+/* Buttons */
 .btn {
-  display: inline-block;
-  background: #ff9800;
-  color: white;
+  background: gold;
+  color: black;
   padding: 10px 20px;
   border-radius: 25px;
-  text-decoration: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
   transition: 0.3s;
 }
 .btn:hover {
-  background: #e65100;
-}
-
-/* Cards */
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin: 50px 20px;
-}
-.card {
-  background: white;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  max-width: 300px;
-  text-align: center;
-}
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-.card h2 {
-  color: #d32f2f;
-}
-
-/* Sub Pages */
-.sub-hero {
-  text-align: center;
-  padding: 80px 20px;
-  color: white;
-  background-size: cover;
-}
-.content {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-  line-height: 1.7;
-}
-.content h2 {
-  color: #d32f2f;
-  margin-top: 30px;
+  background: orange;
 }
 
 /* Contact Form */
@@ -106,25 +92,26 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 500px;
-  margin: auto;
+  width: 100%;
+  max-width: 400px;
 }
 .contact-form input,
 .contact-form textarea {
   padding: 12px;
   border-radius: 10px;
-  border: 1px solid #ccc;
+  border: none;
+  outline: none;
   font-size: 1em;
 }
 .contact-form button {
-  cursor: pointer;
+  background: gold;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  background: #d32f2f;
-  color: white;
+  background: #111;
   padding: 15px;
-  margin-top: 40px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9em;
 }
