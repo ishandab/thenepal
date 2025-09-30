@@ -1,4 +1,4 @@
-/* Fonts & Theme */
+/* General */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -9,28 +9,24 @@ body {
 
 h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 3em;
-  margin-bottom: 20px;
+  font-size: 2.5em;
   color: gold;
 }
 
 p {
   font-size: 1.2em;
-  max-width: 700px;
-  margin: auto;
   line-height: 1.6;
+  max-width: 500px;
 }
 
 /* Navbar */
 nav {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.85);
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 15px 40px;
   z-index: 1000;
 }
@@ -41,67 +37,71 @@ nav .logo {
   font-weight: bold;
 }
 nav ul {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 20px;
 }
 nav ul li a {
   color: #f5f5f5;
   text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
 }
 nav ul li a:hover {
   color: gold;
 }
 
-/* Slides */
+/* Slide Layout */
 .slide {
   min-height: 100vh;
-  padding: 100px 40px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 100px 40px;
+}
+
+.slide .image {
+  flex: 1;
   text-align: center;
 }
-.slide img {
-  max-width: 600px;
-  margin-top: 20px;
+.slide .image img {
+  width: 100%;
+  max-width: 500px;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  filter: blur(10px);
+  opacity: 0.5;
+  transition: all 0.8s ease;
+}
+.slide.active .image img {
+  filter: blur(0);
+  opacity: 1;
+  transform: scale(1.05);
 }
 
-/* Hero */
-.hero {
-  background: url('../images/hero.jpg') center/cover no-repeat;
-  color: white;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+.slide .text {
+  flex: 1;
 }
 
-/* Contact Form */
+/* Form */
 form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 400px;
-  width: 100%;
+  margin-top: 20px;
 }
 input, textarea {
   padding: 12px;
-  border-radius: 8px;
   border: none;
-  outline: none;
+  border-radius: 8px;
   background: #1e1e1e;
   color: white;
 }
 button {
   background: gold;
   color: black;
-  font-weight: bold;
   padding: 12px;
-  border-radius: 8px;
   border: none;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -112,7 +112,7 @@ button:hover {
 /* Footer */
 footer {
   text-align: center;
-  background: #111;
   padding: 20px;
+  background: #111;
   color: #777;
 }
